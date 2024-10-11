@@ -56,5 +56,17 @@ Figure X
 
 - The 'Virtual Network', 'Subnet' and 'IP' should be left as is to its default setting.
 - For Public Inbound Potr and Selected Inbound Port, select the same as figure X.
+- 'Load Balancing' can be set to none as there won't be a high volume of traffic to the VM.
+- Select 'Next : Management' to move on to the next section.
 
+![VM Setup 5](https://github.com/user-attachments/assets/f30b708e-07bc-457c-a3ae-1a51dfc96f15)
+Figure X
+
+- Tick the box to enable the free plan for Microsoft Defender
+- Continue to 'Review + Create' and leave all other settings after this at default.
+
+![VM Setup Finish](https://github.com/user-attachments/assets/83718c36-4331-4627-80c2-d640ae7df92a)
+Figure X
+
+- The screen should be showing the VM being initialised as shown on figure X.
 ## Summary

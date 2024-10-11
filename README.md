@@ -54,6 +54,7 @@ Figure X
 ![VM Setup 4](https://github.com/user-attachments/assets/0508db24-1457-4571-a702-b0a1ea271417)
 Figure X
 
-
+- The 'Virtual Network', 'Subnet' and 'IP' should be left as is to its default setting.
+- For Public Inbound Potr and Selected Inbound Port, select the same as figure X.
 
 ## Summary

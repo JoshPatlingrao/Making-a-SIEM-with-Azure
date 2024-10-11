@@ -69,4 +69,8 @@ Figure X
 Figure X
 
 - The screen should be showing the VM being initialised as shown on figure X.
+
+![Sentinel Setup 1](https://github.com/user-attachments/assets/422fd224-a5a0-4b4e-8b4d-f8fc5eadcbb3)
+Figure X
+
 ## Summary

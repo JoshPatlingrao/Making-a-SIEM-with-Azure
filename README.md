@@ -2,5 +2,7 @@
 ## Objective
 ### Skills Learned
 ### Tools Used
+- Microsoft Azure
+- Microsoft Sentinel
 ## Steps
 ## Summary

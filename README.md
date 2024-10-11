@@ -73,4 +73,18 @@ Figure X
 ![Sentinel Setup 1](https://github.com/user-attachments/assets/422fd224-a5a0-4b4e-8b4d-f8fc5eadcbb3)
 Figure X
 
+- While the VM is being setup, search 'Sentinel' on the search bar and select the icon. This will bring you to the Sentinel start up page.
+- Click the 'Create Microsoft Sentinel' to start the Sentinel setup.
+
+![Sentinel Setup 2](https://github.com/user-attachments/assets/5c6a0bd4-67f4-4646-beb4-cd41530bbdef)
+Figure X
+
+- Click the 'Create New Workspace' to start.
+
+![Sentinel Setup 3](https://github.com/user-attachments/assets/eb57e671-51a0-495b-9c80-25100f4801b3)
+Figure X
+
+- Select 'Resource Group' as the same as VM from figure X, but otherwise this should be automatically set.
+- Give it a name that should match the previous naming convention.
+- Set the region to the same as VM. This is to minimise or remove the distance lag when the Sentinel is logging the events in the VM.
 ## Summary

@@ -87,4 +87,14 @@ Figure X
 - Select 'Resource Group' as the same as VM from figure X, but otherwise this should be automatically set.
 - Give it a name that should match the previous naming convention.
 - Set the region to the same as VM. This is to minimise or remove the distance lag when the Sentinel is logging the events in the VM.
+
+![Sentinel Setup 4](https://github.com/user-attachments/assets/30774a0f-119e-4529-82e8-b974cfa2f79c)
+Figure X
+
+- No need to set the tags. Skip to the 'Review + Create' and finish the setup.
+
+![Sentinel Setup Finish](https://github.com/user-attachments/assets/b250638c-5153-4ea7-a902-ee7eacf34943)
+Figure X
+
+- The finished setup should show the new Sentinel as part of the work space.
 ## Summary

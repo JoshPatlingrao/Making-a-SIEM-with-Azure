@@ -244,4 +244,6 @@ Figure X
 
 - Go back to the Microsoft Sentinel
 - Go to 'Overview'. It should now be populated with data regvarding the incident, and potentially other incidents regarding attempts to bruteforce connection to the VM using RDP.
+
+
 ## Summary

@@ -18,30 +18,18 @@ Create an account with Microsoft Azure and login to this page.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ad23ff5d-0bd7-4cfe-a8d6-50cdad4164be">
-
-  <p align="center">
-    Figure 1: Microsoft Azure startup page.
-  </p>
 </p>
 
 - Click the 'Virtual Machine' icon to open the window to create a VM.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2e541198-fd15-453b-b97d-6ad9272c77d6">
-
-  <p align="center">
-    Figure 2: Microsoft VM startup page.
-  </p>
 </p>
 
 - Click the '+ Create' tab and select the 'Azure virtual machine with preset configuration' option.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/21fdc02f-7d62-43ec-a1c0-fe2756ece75a">
-
-  <p align="center">
-    Figure 3: Microsoft VM Basic page.
-  </p>
 </p>
 
 - Give the 'Resource Group' and 'Virtual Machine' a name. Do it in a similar format as shown in figure X for clarity and naming convention.

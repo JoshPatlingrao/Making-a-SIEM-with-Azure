@@ -103,7 +103,7 @@ Figure X
 
 - Type in the search bar 'VM' and go back to the VM interface. The VM should have the status set to 'Running'.
 
-![VM Connect 2](https://github.com/user-attachments/assets/b9146ad8-07d5-4689-805a-05a81ad8151c)
+![VM Connect 2](https://github.com/user-attachments/assets/2d5a4d70-d8fe-4e43-973f-ca6c5b6b57c1)
 Figure X
 
 - Select the VM and go to 'Overview'. As shown on figure X, this will provide the specifications of the machine and it should match the ones et on the previous steps.
@@ -245,5 +245,11 @@ Figure X
 - Go back to the Microsoft Sentinel
 - Go to 'Overview'. It should now be populated with data regvarding the incident, and potentially other incidents regarding attempts to bruteforce connection to the VM using RDP.
 
+![RDP Private](https://github.com/user-attachments/assets/9bac8e30-d193-44cd-8a86-e6e06499ee76)
+Figure X
 
+- To modify the setting of the RDP from public to be private. Go to 'Network', then 'Network Settings'.
+- Select 'RDP'.
+- Set the 'Source' to 'My IP Address'.
+  - This method is only safe as long as your IP address is kept secure. Otherwise it's still possible for attackers to spoof your IP address, impersonate your request and gain access to your VM.
 ## Summary

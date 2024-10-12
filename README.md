@@ -185,4 +185,63 @@ Figure X
   - The "success" keyword in the 'Activity' field indicates that a succesful login has occured which is the priority over the failed logins.
   - The "system" keyword in the 'Account' field is filtered out to remove succesful login events which may have been done by a system account.
   - The combination of these filters should only display succesful login events that have been initated through an RDP.
+- When done, select 'New Alert Rule' and select 'Create Microsoft Sentinel Alert'.
+
+![Create Microsoft Sentinel Rule](https://github.com/user-attachments/assets/f8038b00-3822-46b2-a0ff-61e8a00a6a96)
+Figure X
+
+- Name the rule 'Succesful Local Sign-Ins'.
+- Write a brief description with regards to the RDP protocol.
+- Set severity to 'Medium'
+- Set MITRE ATT&CK to 'Initial Access'.
+- Click 'Next : Set Rule Logic'.
+
+![Microsoft Sentinel Rule 2](https://github.com/user-attachments/assets/77bd0894-42eb-4f9f-a119-571a4df585f2)
+Figure X
+
+- Set 'Run Query' to every 5 minutes.
+  - This will run the query every 5 mins.
+- Set 'Lookup Data' to every 5 hours.
+  - This will raise every alert from the past 5 hours.
+- Set 'Start Running' to 'Automatically'.
+  - This will cause the rule to be applied immediately.
+- Set 'Alert Threshold' to greater than 0.
+  - This will cause the alert to raise immediartely once it detects an instance of the event.
+- Set 'Event Grouping' to group all events into a single alert
+- Click 'Next : Incident Settings'.
+
+![Microsoft Sentinel Rule 3](https://github.com/user-attachments/assets/f76360aa-4b99-4da2-ac59-547d3c7e53f5)
+Figure X
+
+- Enable the 'Incident Settings'
+- Move on to 'Review + Create' and finish the setting the rule.
+
+![Analytics - New Rule](https://github.com/user-attachments/assets/ef2579cd-1bdf-415f-ba63-dce2262e3aa1)
+Figure X
+
+- Go back to Microsfot Sentinel Analytics.
+- Go to 'Configuration' then 'Analytics'. The new rule should now be displayed there, the status should be 'Enabled'.
+
+![New](https://github.com/user-attachments/assets/e9690baa-f2f3-4abe-8bca-33720988afe7)
+Figure X
+
+- Go back to VMs.
+- Go to 'Connect' and click 'Download RDP File'
+- Double-click the file in the 'Downloads' folder in your PC.
+- Login using the credentials that you set when creating the VM.
+- Wait for 5 minutes.
+
+![Logged Incident](https://github.com/user-attachments/assets/6bdbcb44-49d0-4d43-8f82-ff836f29c69a)
+Figure X
+
+- Go back to Microsoft Sentinel.
+- Go to 'Threat Management', then go to 'Incidents'
+- There should now be a logged incident from the succesful RDP login from the previous step.
+  - This indicates that the rule is working.
+ 
+![Incident Overview](https://github.com/user-attachments/assets/cf5b45fa-5524-4557-afae-5808962145df)
+Figure X
+
+- Go back to the Microsoft Sentinel
+- Go to 'Overview'. It should now be populated with data regvarding the incident, and potentially other incidents regarding attempts to bruteforce connection to the VM using RDP.
 ## Summary

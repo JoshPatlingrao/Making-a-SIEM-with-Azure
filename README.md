@@ -252,4 +252,6 @@ Figure X
 - Select 'RDP'.
 - Set the 'Source' to 'My IP Address'.
   - This method is only safe as long as your IP address is kept secure. Otherwise it's still possible for attackers to spoof your IP address, impersonate your request and gain access to your VM.
+
 ## Summary
+The project demonstrates my ability to configure a VM, setup Microsfot Sentinel to analyse log data from VM, how to configure alert rules and securing RDP conenctions to the VM. One additional security precaution that should be taken would be to use a VPN when connecting to the VM using your IP address to prevent attackers from spoofing your IP address as the VPN shields the connection from 3rd party observers.

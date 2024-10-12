@@ -97,4 +97,92 @@ Figure X
 Figure X
 
 - The finished setup should show the new Sentinel as part of the work space.
+
+![VM Connect](https://github.com/user-attachments/assets/39042aab-1c17-4edb-989d-0acfe9551fcd)
+Figure X
+
+- Type in the search bar 'VM' and go back to the VM interface. The VM should have the status set to 'Running'.
+
+![VM Connect 2](https://github.com/user-attachments/assets/b9146ad8-07d5-4689-805a-05a81ad8151c)
+Figure X
+
+- Select the VM and go to 'Overview'. As shown on figure X, this will provide the specifications of the machine and it should match the ones et on the previous steps.
+- Go to 'Networking' then to 'Networking Settings' to confirm that the VM allows for RDP connection.
+
+![Sentinel Add](https://github.com/user-attachments/assets/31b19217-48ae-49db-9c85-084dbc6d14c6)
+Figure X
+
+- Go back to the Sentinel page, select the Sentinel that was set up and click 'Add' to add to the workspace.
+
+![Sentinel Overview](https://github.com/user-attachments/assets/96c2d4ad-41cf-4f39-9c2b-eb868a5538d7)
+Figure X
+
+- Select the Sentinel again and open the 'Overview' page. This will display the Incidents, Automation, Data and Analytics regarding the events happening on the VM.
+
+![Log Analytics Workspace](https://github.com/user-attachments/assets/bebc5ea1-62c5-4a99-abef-237b1ed3bfb0)
+Figure X
+
+- To do this, go back to the Analytics Workspace through the search bar and open the Analytics that has been setup.
+  - The Analytics will process the event logs from the VM before passing it to the Sentinel.
+ 
+![Sentinel Data Connectors](https://github.com/user-attachments/assets/d0185f40-4e33-4bd2-a9f0-54e7bff84abd)
+Figure X
+- Go to 'Configuration' then 'Data Connectors'.
+  - This is where the Log Analytics can 'connect' to a source of log events.
+- Click on 'Content Hub'.
+
+![Content Hub Install](https://github.com/user-attachments/assets/b1c0a0cb-e5b2-451f-b2ee-bf8d8abb5a21)
+Figure X
+
+- Type 'Azure Monitor Agent' on the search bar.
+  - While there are many connectors, the one we'll be using is the 'Azure Monitor Agent'.
+- Select the 'Windows Security Event' and click 'Install'.
+- Wait until the statuc displays 'Installed'.
+
+![Updated Connectors](https://github.com/user-attachments/assets/c26e85ab-a2d4-4da7-a99e-1f1a2d9edc8c)
+Figure X
+
+- Go back to the 'Microsoft Sentinel' page.
+- Select the log analytics, go to 'Configuration', then 'Data Connectors'.
+  - This should display the installed data connectors.
+  - If it doesn't, then click 'Refresh'.
+ 
+![Open Connector Page](https://github.com/user-attachments/assets/4216928b-1833-41a4-9247-19a0fdddadba)
+Figure X
+
+- Select the 'Windows Security Events via AMA' and click 'Open Connector Page'.
+
+![Data Connector Setup 1](https://github.com/user-attachments/assets/7b08e1da-8b81-4aa6-be7b-d8b014ddafb4)
+Figure X
+
+- This page should open and click 'Create Data Collection Rule'.
+- Give the rule a name.
+- Make sure its resource group is the same as the VM.
+
+![Data Connector Setup 2](https://github.com/user-attachments/assets/194cf0d1-d5ea-4aaa-99f0-223a1c743757)
+Figure X
+
+- Select the VM and click 'Next : Collect'.
+
+![Data Connector Setup 2](https://github.com/user-attachments/assets/fc99ba59-5b57-4112-bb62-d548f8397b69)
+Figure X
+
+- Select 'All Secrutiy Events' and click 'Next : Review + Create'.
+- Finish the setup.
+
+![Query Log](https://github.com/user-attachments/assets/d0b0b28d-52cb-48e5-84cb-ec13806f4cec)
+Figure X
+
+- Go back to the Sentinel page, select the log analytics and go to 'Logs'.
+- Go to 'Microsoft Sentinel' tab and Select 'Secruity Event'.
+- Click 'Run'
+  - This will show the brute force attempts to use RDP to access the VM that has occured so far.
+ 
+![Query Log 3](https://github.com/user-attachments/assets/762ebf6d-e533-4b53-b5ba-60cfc1dfc483)
+Figure X
+
+- Set the filter to 'SecurityEvent | where Activity contains "success" and Account !contain "system"'.
+  - The "success" keyword in the 'Activity' field indicates that a succesful login has occured which is the priority over the failed logins.
+  - The "system" keyword in the 'Account' field is filtered out to remove succesful login events which may have been done by a system account.
+  - The combination of these filters should only display succesful login events that have been initated through an RDP.
 ## Summary
